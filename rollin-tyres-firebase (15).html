@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rollin Tyres</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<!-- Firebase SDK (pinned version) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<!-- PDF library: loaded from the CDN, or from a local jspdf.umd.min.js placed next to this file (for fully offline use) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>window.jspdf||document.write('<script src="jspdf.umd.min.js"><\/script>')</script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=Josefin+Sans:wght@300;400;600&family=Anton&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f4f1;--surf:#fff;--ink:#1d1f22;--mut:#5d636b;--line:#d5d7da;--acc:#f2c230;--acc-t:#1d1f22;--side:#f2c230;--side-t:#1d1f22;--warn:#b45309;--warnbg:#fef3c7;--bad:#b42318;--badbg:#fee4e2;--ok:#176b3a;--okbg:#dcf5e5;--ft:'Barlow',system-ui,sans-serif;--fh:'Barlow Condensed','Arial Narrow',sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1c1e;--surf:#27292c;--ink:#f1f1ee;--mut:#a3a9b0;--line:#3d4046;--acc:#f2c230;--acc-t:#1d1f22;--side:#f2c230;--warn:#fbbf24;--warnbg:#3a2a07;--bad:#fda29b;--badbg:#3b1512;--ok:#7fe0a2;--okbg:#0f2e1c}}
+:root[data-theme="dark"]{--bg:#1b1c1e;--surf:#27292c;--ink:#f1f1ee;--mut:#a3a9b0;--line:#3d4046;--acc:#f2c230;--acc-t:#1d1f22;--side:#f2c230;--warn:#fbbf24;--warnbg:#3a2a07;--bad:#fda29b;--badbg:#3b1512;--ok:#7fe0a2;--okbg:#0f2e1c}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font:500 16px/1.45 var(--ft)}
+#app{display:flex;height:100%}
+nav{width:280px;background:var(--side);color:var(--side-t);padding:34px 20px 24px;display:flex;flex-direction:column;gap:6px;flex:none}
+.brand{padding:0 6px 26px;margin-bottom:16px;border-bottom:1.5px solid rgba(29,31,34,.28)}
+.brand .bw{width:fit-content;max-width:100%}
+.brand .wm{display:block;font:400 42px/1 'Anton',Impact,'Arial Narrow',sans-serif;letter-spacing:.02em;color:#1d1f22;white-space:nowrap}
+.brand .sl{display:flex;justify-content:space-between;margin-top:12px;font:400 19px/1 'Anton',Impact,'Arial Narrow',sans-serif;color:#1d1f22}
+.brand .sl i{font-style:normal}.brand .sl i.s{width:.5em}
+nav button{all:unset;cursor:pointer;padding:15px 16px;border-radius:10px;font-weight:700;font-size:17px;color:var(--side-t)}
+nav button:hover{background:rgba(29,31,34,.1)}
+nav button.on{background:#1d1f22;color:#f2c230}
+nav .sp{flex:1}
+main{flex:1;overflow:auto;padding:36px clamp(24px,3.5vw,48px) 48px}
+h1{font:700 34px/1.1 var(--fh);margin:0 0 22px;letter-spacing:.3px}
+h2{font:700 22px/1.1 var(--fh);margin:0 0 10px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:22px;margin-bottom:22px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end}
+.row>*{flex:1 1 160px}
+label{display:block;font-size:13px;color:var(--mut);font-weight:600;margin-bottom:4px}
+input,select,textarea{width:100%;font:inherit;padding:10px 11px;min-height:44px;border:1px solid var(--line);border-radius:8px;background:var(--surf);color:var(--ink)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.btn{font:600 15px var(--ft);min-height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--line);background:var(--surf);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--mut)}
+.btn.p{background:var(--acc);color:var(--acc-t);border-color:var(--acc)}
+.btn.d{color:var(--bad)}
+.btn.s{min-height:36px;padding:0 10px;font-size:14px}
+.btn.w{background:#1f9d55;color:#fff;border-color:#1f9d55}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{text-align:left;font-size:13px;color:var(--mut);font-weight:600;padding:8px 10px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:13px;font-weight:600}
+.b-ok{background:var(--okbg);color:var(--ok)}.b-low{background:var(--warnbg);color:var(--warn)}.b-out{background:var(--badbg);color:var(--bad)}
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+.res{max-height:300px;overflow:auto;margin-top:8px}
+.res button{all:unset;display:flex;justify-content:space-between;gap:8px;width:100%;box-sizing:border-box;padding:10px;border-bottom:1px solid var(--line);cursor:pointer}
+.res button:hover{background:var(--bg)}
+.q{display:inline-flex;align-items:center;gap:4px}
+.q input{width:64px;text-align:center;padding:4px}
+.tot{display:flex;justify-content:space-between;padding:4px 0}
+.tot.g{font:700 26px var(--fh);border-top:2px solid var(--ink);margin-top:6px;padding-top:8px}
+.mut{color:var(--mut)}
+.tabs{display:flex;gap:6px;margin-bottom:14px}
+.tabs .btn.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+dialog{border:0;padding:0;background:transparent;color:var(--ink);width:min(560px,90vw);max-height:none;overflow:visible}
+.dbox{border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--surf);max-height:88vh;overflow:auto}
+.dx{position:absolute;top:-16px;right:-12px;width:40px;height:40px;border-radius:50%;border:2px solid var(--line);background:var(--surf);color:var(--ink);font:700 18px var(--ft);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.dx:hover{background:var(--bad);color:#fff;border-color:var(--bad)}
+dialog::backdrop{background:#0008}
+.acts{display:flex;gap:8px;justify-content:flex-end;margin-top:14px;flex-wrap:wrap}
+#toast{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;display:none;z-index:99}
+.ok-box{text-align:center;padding:24px 10px}
+.ok-box .big{font:700 40px var(--fh);color:var(--ok)}
+#print{display:none}
+.inv{font:14px/1.4 Arial,sans-serif;color:#000;background:#fff}
+.inv h3{margin:0;font-size:24px}
+.inv table{font-size:13px}.inv th,.inv td{border-bottom:1px solid #bbb;color:#000}
+.inv.th{width:76mm;font-size:12px}
+.inv.th h3{font-size:18px;text-align:center}
+.inv .c{text-align:center}
+.inv .tag{font:400 11px/1 'Josefin Sans',Arial,sans-serif;letter-spacing:.42em;text-transform:uppercase;color:#2e3b31}
+.inv.th .tag{font-size:9px}
+@media(max-width:820px){#app{flex-direction:column}nav{width:auto;flex-direction:row;overflow-x:auto;padding:8px;align-items:center;gap:4px}.brand{padding:0 10px;margin:0;border:0}.brand .wm{font-size:24px}.brand .sl,nav .sp{display:none}nav button{white-space:nowrap;padding:11px 14px;font-size:15px}.grid2{grid-template-columns:1fr}main{padding:16px}}
+
+/* ---------- Login screen ---------- */
+.lg{--pt:clamp(48px,13vh,130px);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);min-height:100vh;min-height:100dvh;background:var(--bg)}
+.lg-l{position:relative;overflow:hidden;background:#f2c230;color:#1d1f22;padding:56px clamp(28px,4.5vw,56px) 48px;display:flex;flex-direction:column;min-height:100vh;min-height:100dvh}
+.lg-brand{--fs:clamp(36px,5.4vw,84px);position:relative;z-index:2}
+.lg-brand h1{font:400 var(--fs)/1 'Anton',Impact,'Arial Narrow',sans-serif;letter-spacing:.01em;margin:0;white-space:nowrap}
+.lg-slogan{font:400 calc(var(--fs)*.4)/1 'Anton',Impact,'Arial Narrow',sans-serif;letter-spacing:.32em;margin:calc(var(--fs)*.3) 0 0}
+.lg-rule{display:block;width:56px;height:4px;background:#1d1f22;margin:26px 0 16px}
+.lg-est{margin:0;font-weight:700;font-size:14px;letter-spacing:.18em}
+.lg-info{position:relative;z-index:2;margin-top:auto;padding-top:26px;border-top:1.5px solid rgba(29,31,34,.3);width:min(100%,300px);display:grid;gap:22px}
+.lg-lbl{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px}
+.lg-info address,.lg-info p{margin:0;font-size:15px;line-height:1.55;font-weight:500;font-style:normal}
+.lg-info a{color:inherit;text-decoration:none}.lg-info a:hover{text-decoration:underline}
+.lg-wheel{position:absolute;right:-200px;bottom:-200px;width:460px;height:460px;z-index:1;animation:lgroll 1.6s cubic-bezier(.2,.7,.2,1) both}
+@keyframes lgroll{from{transform:rotate(-200deg) translateX(-80px);opacity:0}to{transform:none;opacity:1}}
+@keyframes lgspin{to{transform:rotate(360deg)}}
+@keyframes lgrise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.lg-r{display:flex;align-items:center;justify-content:center;padding:40px clamp(18px,4vw,48px)}
+.lg-card{width:min(420px,100%);background:var(--surf);border:1px solid var(--line);border-top:6px solid #f2c230;border-radius:12px;padding:clamp(22px,4vw,36px);box-shadow:0 24px 60px -30px #000a;animation:lgrise .55s ease both}
+.lg-card h2{font:700 42px/1 var(--fh);margin:0 0 8px;letter-spacing:.3px}
+.lg-fld{margin-top:18px}
+.lg-in{position:relative}
+.lg-in>svg{position:absolute;left:14px;top:16px;width:18px;height:18px;color:var(--mut);pointer-events:none}
+.lg-in input{padding-left:44px;min-height:50px;border-radius:12px;font-size:16px}
+.lg-eye{position:absolute;right:4px;top:3px;width:44px;height:44px;display:grid;place-items:center;background:none;border:0;color:var(--mut);cursor:pointer;border-radius:10px}
+.lg-eye:hover{color:var(--ink)}.lg-eye svg{width:20px;height:20px}
+.lg-btn{width:100%;min-height:52px;margin-top:8px;font-size:17px;border-radius:12px;box-shadow:0 10px 24px -12px #f2c230}
+.btn.p.lg-btn{background:#f2c230;border-color:#f2c230;color:#1d1f22;font-weight:700}
+.btn.p.lg-btn:hover:not(:disabled){background:#e3b422;border-color:#e3b422}
+.btn.p.lg-btn:focus-visible{outline:3px solid #1d1f22;outline-offset:2px}
+.lg-btn.ld{opacity:.85;cursor:progress}
+.lg-btn.ld::after{content:'';display:inline-block;width:16px;height:16px;margin-left:10px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;vertical-align:-3px;animation:lgspin .7s linear infinite}
+.lg-err{min-height:22px;margin-top:10px;color:var(--bad);font-size:14px;font-weight:600}
+.lg-warn{margin:14px 0 0;padding:10px 12px;border-radius:10px;background:var(--warnbg);color:var(--warn);font-size:14px}
+@media(max-width:1100px){.lg-wheel{display:none}}
+@media(max-width:820px){.lg{grid-template-columns:1fr}.lg-l{min-height:0;padding:32px 24px 28px}.lg-brand{--fs:clamp(34px,13vw,72px)}.lg-info{margin-top:30px}.lg-r{align-items:flex-start;padding-top:22px}}
+@media(prefers-reduced-motion:reduce){.lg-wheel,.lg-card,.lg-btn.ld::after{animation:none}}
+@media print{body>#app,#toast,dialog{display:none!important}#print{display:block!important}html,body{background:#fff}:root{padding:0}}
+</style>
+</head>
+<body>
+<div id="app">
+<nav id="nav"></nav>
+<main id="main"></main>
+</div>
+<div id="print"></div>
+<div id="toast" role="status"></div>
+<dialog id="dlg"></dialog>
+<script>
+const SHOP={name:'Rollin Tyres',tag:'Keep Rollin',addr:'Chettipalayam Pririvu, Marapalam, Madukkarai, Coimbatore - 105',phone:''};
+const LOGO=s=>`<svg xmlns="http://www.w3.org/2000/svg" width="${s}" height="${s}" viewBox="0 0 48 48" aria-hidden="true" style="flex:none"><rect width="48" height="48" rx="12" fill="#0e6b66"/><circle cx="26" cy="24" r="12" fill="none" stroke="#fff" stroke-width="5"/><circle cx="26" cy="24" r="3.5" fill="#7fe3da"/><path d="M5 19h7M3 25h8M7 31h7" stroke="#7fe3da" stroke-width="2.5" stroke-linecap="round"/></svg>`;
+/* ====== FIREBASE SETUP: paste your project's web config here (Firebase console > Project settings > Your apps) ====== */
+const FIREBASE_CONFIG={apiKey:'AIzaSyB1ekpGBdLmAkXHNCWE_cLikezXuOtKgqE',authDomain:'rollin-tyres-9798.firebaseapp.com',projectId:'rollin-tyres-9798',storageBucket:'rollin-tyres-9798.firebasestorage.app',messagingSenderId:'372074086068',appId:'1:372074086068:web:73379c6484eb3d35c2a1e1'};
+/* ======================================================================================================================= */
+const K='rollin_fb',CFG_OK=!!(FIREBASE_CONFIG.apiKey&&FIREBASE_CONFIG.projectId);
+let DB={products:[],invoices:[],log:[],theme:''},fs=null,AUTH='loading',LOADED={},UNSUB=[],pend=0,busy=false;
+try{DB.theme=localStorage.getItem(K+'_theme')||''}catch(e){}
+const SH={products:{},invoices:{},log:{}};
+const KEY={products:x=>x.id,invoices:x=>x.no,log:x=>x.k};
+const SORT={products:(a,b)=>a.id.localeCompare(b.id),invoices:(a,b)=>String(b.created).localeCompare(String(a.created)),log:(a,b)=>String(b.t).localeCompare(String(a.t))};
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+const clean=o=>JSON.parse(JSON.stringify(o));
+const INC=n=>firebase.firestore.FieldValue.increment(n);
+const COL=c=>fs.collection(c);
+const seed=()=>({seq:1,inv:1,theme:'',products:[
+['Apollo','90/90-21','Actizip F1',3650,3100,8],['Apollo','100/90-17','Actizip R1',3200,2700,6],['CEAT','120/80-18','Gripp X3',4850,4200,5],['CEAT','100/80-17','Zoom XL',2950,2500,2],['MRF','90/90-18','Zapper Y',2480,2050,10],['MRF','110/90-17','Nylogrip Plus',3150,2650,4],['TVS Eurogrip','2.75-18','Neo Grip',1850,1500,12],['Michelin','110/70-17','Pilot Street',4400,3700,0]
+].map((p,i)=>({id:'T'+String(i+1).padStart(3,'0'),brand:p[0],size:p[1],tread:p[2],sell:p[3],cost:p[4],soh:p[5]})),invoices:[],log:[]});
+function syncErr(e){console.error(e);toast('Could not save: '+((e&&e.message)||'check your connection'))}
+function save(){
+ try{localStorage.setItem(K+'_theme',DB.theme||'')}catch(e){}
+ if(!fs||AUTH!=='in')return;
+ for(const c of ['products','invoices','log']){const cur={};DB[c].forEach(x=>cur[KEY[c](x)]=JSON.stringify(x));
+  for(const k in cur)if(SH[c][k]!==cur[k]){SH[c][k]=cur[k];COL(c).doc(k).set(JSON.parse(cur[k])).catch(syncErr)}
+  for(const k in SH[c])if(!(k in cur)){delete SH[c][k];COL(c).doc(k).delete().catch(syncErr)}}
+}
+function listen(c){UNSUB.push(COL(c).onSnapshot(s=>{const arr=[];SH[c]={};s.docs.forEach(d=>{const x=d.data();arr.push({...x});SH[c][d.id]=JSON.stringify(x)});DB[c]=arr.sort(SORT[c]);if(!s.metadata.fromCache||s.size>0)LOADED[c]=1;softRender()},e=>toast('Cannot read data: '+e.message)))}
+function softRender(){if(pend)return;const a=document.activeElement;if(a&&/INPUT|SELECT|TEXTAREA/.test(a.tagName)&&$('#main').contains(a)){pend=1;return setTimeout(()=>{pend=0;softRender()},1500)}const v={};document.querySelectorAll('#main input[id^=r],#main select[id^=r]').forEach(e=>v[e.id]=e.value);render();for(const k in v){const e=$('#'+k);if(e)e.value=v[k]}}
+function initFb(){
+ if(!CFG_OK)return render();
+ if(typeof firebase==='undefined'){AUTH='out';return render()}
+ try{firebase.initializeApp(FIREBASE_CONFIG);fs=firebase.firestore();fs.enablePersistence({synchronizeTabs:true}).catch(()=>{});
+  firebase.auth().onAuthStateChanged(u=>{UNSUB.forEach(f=>f());UNSUB=[];LOADED={};
+   if(u){AUTH='in';['products','invoices','log'].forEach(listen)}
+   else{AUTH='out';DB.products=[];DB.invoices=[];DB.log=[];for(const c in SH)SH[c]={}}
+   render()})}catch(e){console.error(e);AUTH='out';render()}
+ render()}
+function gateFull(h){$('#nav').style.display='none';$('#main').style.padding='0';$('#main').innerHTML=h}
+function gate(h){$('#nav').style.display='none';$('#main').style.padding='';$('#main').innerHTML=`<div style='max-width:540px;margin:5vh auto'>${h}</div>`}
+function render(){
+ if(!CFG_OK)return gate(setupHtml());
+ if(typeof firebase==='undefined')return gate(`<div class='card'><h1>Cannot load Firebase</h1><p>Check your internet connection and reload the page.</p></div>`);
+ if(AUTH==='loading')return gate(`<p class='mut' style='text-align:center'>Loading\u2026</p>`);
+ if(AUTH==='out')return gateFull(loginHtml());
+ $('#nav').style.display='';$('#main').style.padding='';render0()}
+function setupHtml(){return `<div class='card'><div style='display:flex;align-items:center;gap:10px'><h1 style='margin:0'>Connect your Firebase</h1></div>
+<p>This app keeps its data in your own Firebase project, so it syncs across devices and does not depend on anyone else's service. One-time setup:</p>
+<ol style='line-height:1.7;padding-left:20px'><li>Open the Firebase console and create a project.</li><li>Build &gt; <b>Firestore Database</b> &gt; Create database.</li><li>Build &gt; <b>Authentication</b> &gt; Get started &gt; enable <b>Email/Password</b>, then add a user. This is your shop login.</li><li>Project settings &gt; Your apps &gt; add a <b>Web app</b> and copy its config values.</li><li>Paste them into <b>FIREBASE_CONFIG</b> at the top of this file's script.</li><li>Firestore &gt; <b>Rules</b>: paste the rules below and Publish.</li><li>Optional, for phones and other computers: put this file on a web host (Firebase Hosting or Netlify, both free) and open that address on each device.</li></ol>
+<pre style='background:var(--bg);padding:12px;border-radius:8px;overflow:auto;font-size:13px'>rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}</pre></div>`}
+function loginHtml(){
+ const ic=d=>`<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>${d}</svg>`;
+ const mail=ic(`<rect x='3' y='5' width='18' height='14' rx='2.5'/><path d='m4 7 8 6 8-6'/>`),lock=ic(`<rect x='4.5' y='10.5' width='15' height='10' rx='2.5'/><path d='M8 10.5V8a4 4 0 0 1 8 0v2.5'/>`),eye=ic(`<path d='M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z'/><circle cx='12' cy='12' r='3'/>`);
+ return `<div class='lg'>
+ <section class='lg-l'>
+   <div class='lg-brand'><h1>ROLLIN TYRES</h1><p class='lg-slogan'>KEEP ROLLIN</p><span class='lg-rule'></span><p class='lg-est'>EST. 2027</p></div>
+   <div class='lg-info'><div><div class='lg-lbl'><svg viewBox='0 0 24 24' width='16' height='16' aria-hidden='true'><path fill='currentColor' d='M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z'/></svg>Visit us</div><address>${SHOP.addr}</address></div><div><div class='lg-lbl'><svg viewBox='0 0 24 24' width='16' height='16' aria-hidden='true'><path fill='currentColor' d='M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z'/></svg>Contact</div><p><a href='tel:+919655954749'>+91 96559 54749</a><br><a href='mailto:balajiimaha@gmail.com'>balajiimaha@gmail.com</a></p></div></div>
+   <svg class='lg-wheel' viewBox='0 0 400 400' aria-hidden='true'><circle cx='200' cy='200' r='196' fill='#26282b'/><circle cx='200' cy='200' r='178' fill='none' stroke='#3d4046' stroke-width='22' stroke-dasharray='16 9'/><circle cx='200' cy='200' r='140' fill='#1d1f22'/><circle cx='200' cy='200' r='118' fill='#9aa3ab'/><circle cx='200' cy='200' r='104' fill='#26282b'/><g stroke='#9aa3ab' stroke-width='9' stroke-linecap='round'><path d='M200 200V108M200 200L287 172M200 200L253 274M200 200L147 274M200 200L113 172'/></g><circle cx='200' cy='200' r='22' fill='#f2c230'/></svg>
+  </section>
+  <section class='lg-r'><form class='lg-card' onsubmit='doLogin(event)'>
+  <h2>Sign in</h2><p class='mut' style='margin:0'>Sign in to open counter</p>
+  <div class='lg-fld'><label for='le'>Email</label><div class='lg-in'>${mail}<input id='le' type='email' autocomplete='username' placeholder='you@example.com' required></div></div>
+  <div class='lg-fld'><label for='lp'>Password</label><div class='lg-in'>${lock}<input id='lp' type='password' autocomplete='current-password' placeholder='Your password' required><button type='button' class='lg-eye' onclick='togglePw()' aria-label='Show or hide password'>${eye}</button></div></div>
+  <div id='lm' class='lg-err' role='alert'></div>
+  <button id='lb' class='btn p lg-btn' type='submit'>Sign in</button>
+  <p class='mut' style='text-align:center;font-size:13px;margin:18px 0 0'>For Rollin Tyres staff only.</p>
+ </form></section></div>`}
+function togglePw(){const i=$('#lp');i.type=i.type==='password'?'text':'password';i.focus()}
+async function doLogin(ev){if(ev)ev.preventDefault();const m=$('#lm'),b=$('#lb');m.textContent='';b.disabled=true;b.classList.add('ld');
+ try{await firebase.auth().signInWithEmailAndPassword($('#le').value.trim(),$('#lp').value)}
+ catch(e){m.textContent=/invalid|wrong|user-not-found|credential/i.test(e.code+e.message)?'Wrong email or password.':/network/i.test(e.code)?'No internet connection.':(e.message||'Could not sign in.');b.disabled=false;b.classList.remove('ld')}}
+function doSignOut(){ask('Sign out of Rollin Tyres on this device?','Sign out',()=>firebase.auth().signOut())}
+function banner(){if(!(LOADED.products&&LOADED.invoices)||DB.products.length||DB.invoices.length)return '';return `<div class='card'><b>Your database is empty.</b> <span class='mut'>Add tyres in Inventory, or:</span><div class='acts' style='justify-content:flex-start'><button class='btn' onclick='loadSample()'>Load sample tyres</button><button class='btn' onclick='pickBackup()'>Restore from a backup file</button></div></div>`}
+async function loadSample(){if(DB.products.length)return;try{const b=fs.batch();seed().products.forEach(p=>b.set(COL('products').doc(p.id),p));await b.commit()}catch(e){syncErr(e)}}
+function backupForm(){open_(`<h2>Backup & restore</h2><p class='mut'>Your data is stored only in this browser on this device. Download a backup file regularly. You can restore it here, or on another device, to bring all tyres, bills and logs back.</p><div class='acts' style='justify-content:flex-start'><button class='btn p' onclick='exportBackup()'>Download backup file</button><button class='btn' onclick='pickBackup()'>Restore from a backup file</button></div><div class='acts'><button class='btn' onclick='close_()'>Close</button></div>`)}
+function exportBackup(){saveFile('rollin-tyres-backup-'+today()+'.json',JSON.stringify({app:'rollin-tyres',version:1,...DB},null,1))}
+function pickBackup(){const i=document.createElement('input');i.type='file';i.accept='.json,application/json';i.onchange=()=>restoreBackup(i.files[0]);i.click()}
+function restoreBackup(f){if(!f)return;const r=new FileReader();r.onload=()=>{let o;try{o=JSON.parse(r.result);if(!Array.isArray(o.products)||!Array.isArray(o.invoices))throw 0}catch(e){return toast('That file is not a valid backup')}
+ close_();ask('Replace everything in this browser with the backup ('+o.products.length+' tyres, '+o.invoices.length+' bills)?','Restore',()=>{DB={products:o.products,invoices:o.invoices,log:(o.log||[]).map(l=>({...l,k:l.k||uid()})),theme:DB.theme};save();render();toast('Backup restored')})};r.readAsText(f)}
+const newNo=()=>'RT-'+String(Math.max(0,...DB.invoices.map(i=>{const m=/^RT-(\d+)$/.exec(i.no);return m?+m[1]:0}))+1).padStart(4,'0');
+const nextId=()=>'T'+String(Math.max(0,...DB.products.map(p=>parseInt(p.id.slice(1))||0))+1).padStart(3,'0');
+const $=s=>document.querySelector(s);
+const E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const inr=n=>'₹'+(+n||0).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});
+const today=()=>new Date().toISOString().slice(0,10);
+const now=()=>new Date().toISOString();
+const fdt=s=>new Date(s).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'});
+const fd=s=>new Date(s+'T00:00').toLocaleDateString('en-IN',{dateStyle:'medium'});
+function toast(t){const x=$('#toast');x.textContent=t;x.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>x.style.display='none',2600)}
+function log(p,type,delta,after,reason,ref){DB.log.unshift({k:uid(),t:now(),pid:p.id,name:`${p.brand} ${p.size}`,type,delta,after,reason,ref})}
+const badge=p=>p.soh<=0?'<span class="badge b-out">Out of stock</span>':p.soh<3?'<span class="badge b-low">Low stock</span>':'<span class="badge b-ok">In stock</span>';
+const pname=p=>`${p.brand} ${p.size} ${p.tread}`;
+
+let view='pos',tab='sales',cart=[],cust={name:'',phone:'',veh:'',date:today()},gst=false,rate=18,q='',done=null,iq='';
+const NAV=[['pos','Billing (POS)'],['inv','Inventory'],['stock','Stock replenishment'],['hist','Sales history']];
+function go(v){view=v;render()}
+function render0(){
+ if(DB.theme)document.documentElement.dataset.theme=DB.theme;
+ $('#nav').innerHTML=`<div class="brand"><div class="bw"><span class="wm">ROLLIN TYRES</span><small class="sl" role="img" aria-label="Keep Rollin"><i>K</i><i>E</i><i>E</i><i>P</i><i class="s"></i><i>R</i><i>O</i><i>L</i><i>L</i><i>I</i><i>N</i></small></div></div>`+NAV.map(n=>`<button class="${view===n[0]?'on':''}" onclick="go('${n[0]}')">${n[1]}</button>`).join('')+`<div class="sp"></div><button onclick="backupForm()">Backup &amp; restore</button><button onclick="doSignOut()">Sign out</button><button onclick="toggleTheme()">Light / dark</button>`;
+ $('#main').innerHTML=banner()+({pos:vPos,inv:vInv,stock:vStock,hist:vHist})[view]();
+}
+function toggleTheme(){const d=document.documentElement.dataset.theme==='dark'||(!DB.theme&&matchMedia('(prefers-color-scheme:dark)').matches);DB.theme=d?'light':'dark';save();render()}
+
+/* ---------- POS ---------- */
+const totals=()=>{const sub=cart.reduce((a,c)=>a+c.price*c.qty,0),tax=gst?sub*rate/100:0;return{sub,tax,total:sub+tax}};
+function vPos(){
+ if(done)return vDone();
+ const t=totals(),words=q.toLowerCase().split(/\s+/).filter(Boolean);
+ const hits=q?DB.products.filter(p=>words.every(w=>(p.brand+' '+p.size+' '+p.tread+' '+p.id).toLowerCase().includes(w))).slice(0,30):[];
+ return `<h1>Billing</h1>
+ <div class="card"><div class="row">
+  <div><label for="cn">Customer name</label><input id="cn" value="${E(cust.name)}" oninput="cust.name=this.value"></div>
+  <div><label for="cp">Phone number</label><input id="cp" type="tel" inputmode="tel" value="${E(cust.phone)}" oninput="cust.phone=this.value"></div>
+  <div><label for="cv">Vehicle number</label><input id="cv" value="${E(cust.veh)}" oninput="vehIn(this)" maxlength="13" placeholder="TN 37 AB 1234" autocapitalize="characters" autocomplete="off" spellcheck="false"></div>
+  <div><label for="cd">Bill date</label><input id="cd" type="date" value="${cust.date}" oninput="cust.date=this.value"></div>
+ </div></div>
+ <div class="grid2">
+  <div class="card"><h2>Find a tyre</h2>
+   <input id="sq" placeholder="Search brand, size or pattern, e.g. Apollo 90/90-21" value="${E(q)}" oninput="q=this.value;keep('sq',vPosRes)" aria-label="Search tyres" autocomplete="off">
+   <div class="res" id="res">${resHtml(hits)}</div></div>
+  <div class="card"><h2>Bill</h2>
+   ${cart.length?`<div class="tw"><table><tr><th>Item</th><th class="n">Price</th><th>Qty</th><th class="n">Amount</th><th></th></tr>${cart.map((c,i)=>{const p=DB.products.find(x=>x.id===c.id);return `<tr><td>${E(c.name)}<div class="mut" style="font-size:12px">${p?p.soh:0} in stock</div></td>
+   <td class="n"><input type="number" min="0" value="${c.price}" style="width:90px" onchange="cart[${i}].price=Math.max(0,+this.value||0);render()" aria-label="Unit price"></td>
+   <td><span class="q"><button class="btn s" onclick="qty(${i},-1)" aria-label="Decrease">−</button><input type="number" min="1" value="${c.qty}" onchange="setQty(${i},this.value)" aria-label="Quantity"><button class="btn s" onclick="qty(${i},1)" aria-label="Increase">+</button></span></td>
+   <td class="n">${inr(c.price*c.qty)}</td><td><button class="btn s d" onclick="cart.splice(${i},1);render()" aria-label="Remove">✕</button></td></tr>`}).join('')}</table></div>`:'<p class="mut">No items yet. Search and tap a tyre to add it.</p>'}
+   <div class="row" style="margin:12px 0"><label style="display:flex;gap:8px;align-items:center;margin:0;flex:0 0 auto"><input type="checkbox" style="width:22px;min-height:22px" ${gst?'checked':''} onchange="gst=this.checked;render()"> Add GST</label>
+   ${gst?`<div style="flex:0 0 100px"><input type="number" value="${rate}" min="0" max="50" onchange="rate=+this.value||0;render()" aria-label="GST percent"></div><span class="mut" style="flex:0 0 auto">% (CGST+SGST)</span>`:''}</div>
+   <div class="tot"><span>Subtotal</span><span>${inr(t.sub)}</span></div>
+   ${gst?`<div class="tot"><span>GST @ ${rate}%</span><span>${inr(t.tax)}</span></div>`:''}
+   <div class="tot g"><span>Total</span><span>${inr(t.total)}</span></div>
+   <div class="acts"><button class="btn" onclick="ask('Clear this bill?','Clear',()=>{cart=[];render()})">Clear</button><button class="btn p" onclick="complete()" ${cart.length?'':'disabled'}>Complete sale</button></div>
+  </div></div>`;
+}
+function resHtml(h){return !q?'<p class="mut" style="padding:8px">Start typing to see matching tyres.</p>':h.length?h.map(p=>`<button onclick="addItem('${p.id}')" ${p.soh<=0?'style="opacity:.55"':''}><span><b>${E(p.brand)} ${E(p.size)}</b> <span class="mut">${E(p.tread)}</span></span><span>${inr(p.sell)} · ${p.soh<=0?'out':p.soh+' left'}</span></button>`).join(''):'<p class="mut" style="padding:8px">No tyre matches. Check the spelling or add it in Inventory.</p>'}
+function vPosRes(){const words=q.toLowerCase().split(/\s+/).filter(Boolean);$('#res').innerHTML=resHtml(q?DB.products.filter(p=>words.every(w=>(p.brand+' '+p.size+' '+p.tread+' '+p.id).toLowerCase().includes(w))).slice(0,30):[])}
+function keep(id,fn){fn()}
+function addItem(id){const p=DB.products.find(x=>x.id===id);if(!p)return;const c=cart.find(x=>x.id===id);if(c){if(c.qty>=p.soh)return toast(`Only ${p.soh} in stock`);c.qty++}else{if(p.soh<=0)return toast('Out of stock');cart.push({id,name:pname(p),price:p.sell,cost:p.cost,qty:1})}q='';render();$('#sq')&&$('#sq').focus()}
+function qty(i,d){setQty(i,cart[i].qty+d)}
+function setQty(i,v){const p=DB.products.find(x=>x.id===cart[i].id);v=Math.max(1,Math.floor(+v||1));if(p&&v>p.soh){toast(`Only ${p.soh} in stock`);v=Math.max(1,p.soh)}cart[i].qty=v;render()}
+function complete(){
+ if(!cart.length)return;
+ for(const c of cart){const p=DB.products.find(x=>x.id===c.id);if(!p||p.soh<c.qty)return toast(`Not enough stock: ${c.name}`)}
+ const t=totals(),no=newNo();
+ const inv={no,date:cust.date||today(),created:now(),name:cust.name||'Walk-in customer',phone:cust.phone,veh:cust.veh,items:cart.map(c=>({...c})),gst,rate:gst?rate:0,sub:t.sub,tax:t.tax,total:t.total};
+ cart.forEach(c=>{const p=DB.products.find(x=>x.id===c.id);p.soh-=c.qty;log(p,'Sale',-c.qty,p.soh,'Bill '+no,no)});
+ DB.invoices.unshift(inv);save();done=inv;cart=[];cust={name:'',phone:'',veh:'',date:today()};gst=false;q='';render();
+}
+function vDone(){const i=done;return `<div class="card ok-box"><div class="big">Sale complete</div><p>Bill <b>${i.no}</b> · ${inr(i.total)} · stock updated</p>
+ <div class="acts" style="justify-content:center"><button class="btn p" onclick="dlInvoice('${i.no}','a4')">Download A4 PDF</button><button class="btn" onclick="dlInvoice('${i.no}','th')">Download receipt PDF</button><button class="btn" onclick="printInv('${i.no}','a4')">Print A4</button><button class="btn" onclick="printInv('${i.no}','th')">Print receipt</button><button class="btn w" onclick="wa('${i.no}')">Send on WhatsApp</button><button class="btn" onclick="done=null;render()">New sale</button></div>
+ <p class="mut" style="max-width:520px;margin:14px auto 0;font-size:14px">PDF downloads ask you to confirm before saving. Print opens the browser print window. WhatsApp opens with the bill summary ready to send${i.phone?'':' — add a phone number in Sales history to target a customer'}.</p></div>`}
+
+/* ---------- Invoice / print / WhatsApp ---------- */
+const getInv=no=>DB.invoices.find(i=>i.no===no);
+function invHtml(i,f){
+ const th=f==='th';
+ return `<div class="inv ${th?'th':''}"><div style="${th?'text-align:center':''}"><div style="font:400 ${th?30:42}px/1 Anton,Impact,'Arial Narrow',sans-serif;letter-spacing:.02em;color:#1a1e22">ROLLIN TYRES</div><div class="tag" style="margin-top:8px">${SHOP.tag.toUpperCase()}</div></div><div class="${th?'c':''}" style="margin-top:16px">${SHOP.addr}</div><hr>
+ <div><b>Bill #: ${i.no}</b> &nbsp; ${fd(i.date)}</div><div>Customer: ${E(i.name)}${i.phone?' · '+E(i.phone):''}</div>${i.veh?`<div>Vehicle: ${E(i.veh)}</div>`:''}
+ <table style="margin:10px 0"><tr><th style="text-align:left">Item</th><th>Qty</th><th style="text-align:right">Rate</th><th style="text-align:right">Amt</th></tr>
+ ${i.items.map(c=>`<tr><td>${E(c.name)}</td><td class="c">${c.qty}</td><td style="text-align:right">${(+c.price).toFixed(2)}</td><td style="text-align:right">${(c.price*c.qty).toFixed(2)}</td></tr>`).join('')}</table>
+ <div style="text-align:right">Subtotal: ${inr(i.sub)}</div>${i.gst?`<div style="text-align:right">CGST ${i.rate/2}%: ${inr(i.tax/2)}</div><div style="text-align:right">SGST ${i.rate/2}%: ${inr(i.tax/2)}</div>`:''}
+ <div style="text-align:right;font-size:${th?16:20}px"><b>Total: ${inr(i.total)}</b></div><hr><div class="c">Thank you for choosing ${SHOP.name}!<br><span class="tag">${SHOP.tag}</span></div></div>`}
+function printInv(no,f){const i=getInv(no);if(!i)return;$('#print').innerHTML=invHtml(i,f);let s=$('#pg');if(!s){s=document.createElement('style');s.id='pg';document.head.appendChild(s)}s.textContent=f==='th'?'@page{size:80mm auto;margin:2mm}':'@page{size:A4;margin:14mm}';setTimeout(()=>window.print(),80)}
+function wa(no){const i=getInv(no);if(!i)return;let p=(i.phone||'').replace(/\D/g,'');if(p.length===10)p='91'+p;
+ const m=`*${SHOP.name}* – Bill ${i.no}\nDate: ${fd(i.date)}\nCustomer: ${i.name}${i.veh?'\nVehicle: '+i.veh:''}\n\n`+i.items.map(c=>`• ${c.name} × ${c.qty} = ${inr(c.price*c.qty)}`).join('\n')+`\n\nSubtotal: ${inr(i.sub)}${i.gst?`\nGST (${i.rate}%): ${inr(i.tax)}`:''}\n*Total: ${inr(i.total)}*\n\nThank you for your purchase!\n${SHOP.tag}\n${SHOP.addr}`;
+ if(!p&&!confirm('No phone number on this bill. Open WhatsApp and choose a contact yourself?'))return;
+ window.open(`https://wa.me/${p}?text=${encodeURIComponent(m)}`,'_blank')}
+
+/* ---------- Inventory ---------- */
+function vInv(){
+ const w=iq.toLowerCase().split(/\s+/).filter(Boolean),ps=DB.products.filter(p=>w.every(x=>(p.id+p.brand+p.size+p.tread).toLowerCase().includes(x)));
+ const low=DB.products.filter(p=>p.soh<3).length;
+ return `<h1>Inventory</h1><div class="card"><div class="row"><div style="flex:3"><label for="iqq">Search</label><input id="iqq" value="${E(iq)}" placeholder="Brand, size or pattern" oninput="iq=this.value;render();const e=$('#iqq');e.focus();e.setSelectionRange(99,99)"></div>
+ <div style="flex:0 0 auto"><button class="btn p" onclick="prodForm()">Add tyre</button></div></div>
+ ${low?`<p style="margin:12px 0 0"><span class="badge b-low">${low} item${low>1?'s':''} low or out of stock</span></p>`:''}</div>
+ <div class="card tw"><table><tr><th>ID</th><th>Brand</th><th>Size</th><th>Tread pattern</th><th class="n">Selling</th><th class="n">Cost</th><th class="n">SOH</th><th>Status</th><th>Actions</th></tr>
+ ${ps.map(p=>`<tr><td>${p.id}</td><td>${E(p.brand)}</td><td>${E(p.size)}</td><td>${E(p.tread)}</td><td class="n">${inr(p.sell)}</td><td class="n">${inr(p.cost)}</td><td class="n"><b>${p.soh}</b></td><td>${badge(p)}</td>
+ <td style="white-space:nowrap"><button class="btn s" onclick="sohForm('${p.id}')">Adjust SOH</button> <button class="btn s" onclick="prodForm('${p.id}')">Edit</button> <button class="btn s d" onclick="delProd('${p.id}')">Delete</button></td></tr>`).join('')||'<tr><td colspan="9" class="mut">No tyres found.</td></tr>'}</table></div>`}
+function open_(h){const d=$('#dlg');d.innerHTML=`<div class='dbox'>${h}</div><button class='dx' onclick='close_()' aria-label='Close'>✕</button>`;d.showModal()}
+const close_=()=>$('#dlg').close();
+function prodForm(id){const p=id?DB.products.find(x=>x.id===id):{brand:'',size:'',tread:'',sell:'',cost:'',soh:0};
+ open_(`<h2>${id?'Edit tyre '+id:'Add tyre'}</h2><div class="row"><div><label>Brand</label><input id="f1" value="${E(p.brand)}"></div><div><label>Size</label><input id="f2" value="${E(p.size)}" placeholder="90/90-21"></div></div>
+ <div class="row" style="margin-top:10px"><div><label>Tread pattern</label><input id="f3" value="${E(p.tread)}"></div></div>
+ <div class="row" style="margin-top:10px"><div><label>Selling price (₹)</label><input id="f4" type="number" min="0" value="${p.sell}"></div><div><label>Cost price (₹)</label><input id="f5" type="number" min="0" value="${p.cost}"></div>${id?'':`<div><label>Opening stock</label><input id="f6" type="number" min="0" value="0"></div>`}</div>
+ <div class="acts"><button class="btn" onclick="close_()">Cancel</button><button class="btn p" onclick="saveProd('${id||''}')">Save tyre</button></div>`)}
+function saveProd(id){const b=$('#f1').value.trim(),s=$('#f2').value.trim();if(!b||!s)return toast('Brand and size are required');
+ const d={brand:b,size:s,tread:$('#f3').value.trim(),sell:+$('#f4').value||0,cost:+$('#f5').value||0};
+ if(id){Object.assign(DB.products.find(x=>x.id===id),d);const p=DB.products.find(x=>x.id===id);log(p,'Edit',0,p.soh,'Details edited')}
+ else{const p={id:nextId(),...d,soh:Math.max(0,Math.floor(+$('#f6').value||0))};DB.products.push(p);log(p,'New product',p.soh,p.soh,'Opening stock')}
+ save();close_();render();toast('Tyre saved')}
+function delProd(id){const p=DB.products.find(x=>x.id===id);if(!confirm(`Delete ${pname(p)}? Past bills and logs are kept.`))return;DB.products=DB.products.filter(x=>x.id!==id);log(p,'Deleted',0,0,'Product removed');save();render();toast('Tyre deleted')}
+function sohForm(id){const p=DB.products.find(x=>x.id===id);
+ open_(`<h2>Adjust stock</h2><p>${E(pname(p))}<br><span class="mut">Current SOH: ${p.soh}</span></p><div class="row"><div><label>New SOH count</label><input id="s1" type="number" min="0" value="${p.soh}"></div>
+ <div><label>Reason</label><select id="s2"><option>New Purchase</option><option>Audit Correction</option><option>Customer Return</option><option>Damage</option><option>Returned to Supplier</option><option>Other</option></select></div></div>
+ <div style="margin-top:10px"><label>Note (optional)</label><input id="s3"></div><div class="acts"><button class="btn" onclick="close_()">Cancel</button><button class="btn p" onclick="saveSoh('${id}')">Update stock</button></div>`)}
+function saveSoh(id){const p=DB.products.find(x=>x.id===id),n=Math.floor(+$('#s1').value);if(isNaN(n)||n<0)return toast('Enter 0 or more');const d=n-p.soh;if(!d){close_();return}
+ const r=$('#s2').value+($('#s3').value.trim()?': '+$('#s3').value.trim():'');p.soh=n;log(p,'Manual override',d,n,r);save();close_();render();toast('Stock updated')}
+
+/* ---------- Stock in ---------- */
+function vStock(){
+ const ins=DB.log.filter(l=>l.type==='Stock-in').slice(0,30);
+ return `<h1>Stock replenishment</h1><div class="card"><div class="row"><div style="flex:2"><label for="r1">Product</label><select id="r1">${DB.products.map(p=>`<option value="${p.id}">${E(pname(p))} (SOH ${p.soh})</option>`).join('')}</select></div>
+ <div><label for="r2">Incoming quantity</label><input id="r2" type="number" min="1" value="1"></div></div>
+ <div class="row" style="margin-top:10px"><div><label for="r3">Supplier / distributor</label><input id="r3"></div><div><label for="r4">Purchase bill number</label><input id="r4"></div></div>
+ <div class="acts"><button class="btn p" onclick="stockIn()" ${DB.products.length?'':'disabled'}>Add to stock</button></div></div>
+ <div class="card tw"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap"><h2 style="margin:0">Recent stock-ins</h2><button class="btn s d" onclick="delAllLogForm('stock')">Delete all stock-in records</button></div><table><tr><th>When</th><th>Product</th><th class="n">Added</th><th class="n">New SOH</th><th>Supplier / bill</th><th></th></tr>
+ ${ins.map(l=>`<tr><td>${fdt(l.t)}</td><td>${E(l.name)}</td><td class="n">+${l.delta}</td><td class="n">${l.after}</td><td>${E(l.reason)}</td><td><button class="btn s d" onclick="delLogForm('${l.k}',true)">Delete</button></td></tr>`).join('')||'<tr><td colspan="6" class="mut">No stock-ins recorded yet.</td></tr>'}</table></div>`}
+function stockIn(){const p=DB.products.find(x=>x.id===$('#r1').value),n=Math.floor(+$('#r2').value),s=$('#r3').value.trim(),b=$('#r4').value.trim();
+ if(!p||!(n>0))return toast('Enter a quantity of 1 or more');if(!s||!b)return toast('Supplier and bill number are required');
+ p.soh+=n;log(p,'Stock-in',n,p.soh,`${s} / Bill ${b}`);save();render();toast(`Added ${n} to ${p.brand} ${p.size}`)}
+
+/* ---------- Downloads: PDF invoices & sales reports ---------- */
+const rs=n=>'Rs. '+(+n||0).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});
+async function saveFile(name,data){try{const t=name.endsWith('.csv')?'text/csv;charset=utf-8':name.endsWith('.json')?'application/json':'application/pdf';const b=data instanceof Blob?data:new Blob([data],{type:t});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),5000);toast('Saved '+name)}catch(e){toast('Could not save the file')}}
+const PDF=()=>{const J=window.jspdf&&window.jspdf.jsPDF;if(!J)toast('PDF library not found. Connect to the internet once and reload, or place jspdf.umd.min.js next to this file.');return J};
+async function buildPdf(i,f){const J=PDF();if(!J)return null;const T=await tagImg(f==='th');const th=f==='th',W=th?80:210,M=th?4:15,R=W-M,C=W/2,al=th?{align:'center'}:{},X=th?C:M;
+ const run=d=>{let y=M+2;d.setFont('helvetica','bold');d.setFontSize(th?20:30);d.text('ROLLIN TYRES',X,y+(th?7:10),{align:th?'center':'left',charSpace:th?.3:.5});y+=th?9:13;d.setFont('helvetica','normal');d.setFontSize(th?7:9);d.text(SHOP.tag.toUpperCase(),X,y+1,{align:th?'center':'left',charSpace:th?1.4:2});y+=th?6:8;d.setFont('helvetica','normal');d.setFontSize(th?8:10);
+  d.splitTextToSize(SHOP.addr,W-2*M).forEach(l=>{d.text(l,X,y,al);y+=th?3.6:4.5});y+=2;d.line(M,y,R,y);y+=th?4:7;
+  d.setFontSize(th?9:11);d.setFont('helvetica','bold');d.text('Bill #: '+i.no,M,y);d.setFont('helvetica','normal');d.text(fd(i.date),R,y,{align:'right'});y+=th?4.5:6;
+  ['Customer: '+i.name+(i.phone?'  '+i.phone:'')].concat(i.veh?['Vehicle: '+i.veh]:[]).forEach(t=>d.splitTextToSize(t,W-2*M).forEach(l=>{d.text(l,M,y);y+=th?4:5}));y+=2;
+  const cQ=th?R-34:R-70,cP=th?R-18:R-40;d.setFont('helvetica','bold');d.setFontSize(th?8:10);d.text('Item',M,y);d.text('Qty',cQ,y,{align:'right'});d.text('Rate',cP,y,{align:'right'});d.text('Amount',R,y,{align:'right'});y+=2;d.line(M,y,R,y);y+=th?4:5.5;d.setFont('helvetica','normal');
+  i.items.forEach(c=>{const nm=d.splitTextToSize(c.name,cQ-M-(th?6:12));if(!th&&y>270){d.addPage();y=20}d.text(nm,M,y);d.text(String(c.qty),cQ,y,{align:'right'});d.text((+c.price).toFixed(2),cP,y,{align:'right'});d.text((c.price*c.qty).toFixed(2),R,y,{align:'right'});y+=nm.length*(th?3.6:4.6)+(th?1.5:2)});
+  y+=1;d.line(M,y,R,y);y+=th?4:6;d.setFontSize(th?9:11);
+  const tl=(a,b,B)=>{d.setFont('helvetica',B?'bold':'normal');d.text(a,M+(th?0:80),y);d.text(b,R,y,{align:'right'});y+=th?4.5:6};
+  tl('Subtotal',rs(i.sub));if(i.gst){tl('CGST '+i.rate/2+'%',rs(i.tax/2));tl('SGST '+i.rate/2+'%',rs(i.tax/2))}d.setFontSize(th?11:14);tl('Total',rs(i.total),1);
+  y+=3;d.setFont('helvetica','italic');d.setFontSize(th?8:10);d.text('Thank you for choosing '+SHOP.name+'!',X,y,al);y+=th?1:1.5;d.addImage(T.url,'PNG',th?(W-T.w)/2:M,y,T.w,T.h);return y+T.h};
+ if(!th){const d=new J({unit:'mm',format:'a4'});run(d);return d}
+ const h=run(new J({unit:'mm',format:[W,2000]}))+6,d=new J({unit:'mm',format:[W,h]});run(d);return d}
+async function loadFonts(){try{await document.fonts.load("400 30px 'Josefin Sans'",'KEEP ROLLIN')}catch(e){}}
+async function tagImg(th){await loadFonts();const f=th?26:34,sp=f*.42,t=SHOP.tag.toUpperCase(),cv=document.createElement('canvas'),x=cv.getContext('2d'),font=`400 ${f}px 'Josefin Sans',Arial,sans-serif`;x.font=font;
+ const ws=[...t].map(c=>x.measureText(c).width),w=Math.ceil(ws.reduce((a,b)=>a+b,0)+sp*(t.length-1))+8,h=Math.round(f*1.6);cv.width=w;cv.height=h;x.font=font;x.fillStyle='#2e3b31';let px=4;[...t].forEach((c,i)=>{x.fillText(c,px,f*1.15);px+=ws[i]+sp});
+ return{url:cv.toDataURL('image/png'),w:w/10,h:h/10}}
+async function dlInvoice(no,f){const i=getInv(no);if(!i)return;const d=await buildPdf(i,f);if(d)saveFile(i.no+(f==='th'?'-receipt':'')+'.pdf',d.output('blob'))}
+let showSt=(()=>{try{return localStorage.getItem(K+'_st')!=='0'}catch(e){return true}})();
+function toggleSt(){showSt=!showSt;try{localStorage.setItem(K+'_st',showSt?'1':'0')}catch(e){}render()}
+let rf=today().slice(0,8)+'01',rt=today();
+const rng=()=>DB.invoices.filter(i=>i.date>=rf&&i.date<=rt);
+const srt=L=>L.slice().sort((a,b)=>a.date.localeCompare(b.date)||String(a.created).localeCompare(String(b.created)));
+const sumR=L=>L.reduce((a,i)=>{i.items.forEach(c=>{a.units+=c.qty;a.cost+=(c.cost||0)*c.qty;a.profit+=(c.price-(c.cost||0))*c.qty});a.sub+=i.sub;a.tax+=i.tax;a.total+=i.total;return a},{units:0,cost:0,profit:0,sub:0,tax:0,total:0});
+function quick(k){if(k==='m'){rf=today().slice(0,8)+'01';rt=today()}else if(k==='t'){rf=rt=today()}else{rf=DB.invoices.map(i=>i.date).sort()[0]||today();rt=today()}render()}
+function rptBar(){const L=rng(),s=sumR(L),st=(a,b)=>`<div style='flex:0 0 auto'><span class='mut' style='font-size:13px'>${a}</span><div style='font:700 22px var(--fh)'>${b}</div></div>`;
+ return `<div class='card'><div class='row'><div><label for='rf'>From</label><input id='rf' type='date' value='${rf}' onchange='rf=this.value;render()'></div><div><label for='rt'>To</label><input id='rt' type='date' value='${rt}' onchange='rt=this.value;render()'></div><div style='flex:0 0 auto'><button class='btn' onclick="quick('t')">Today</button> <button class='btn' onclick="quick('m')">This month</button> <button class='btn' onclick="quick('a')">All time</button></div></div>
+ ${showSt?`<div class='row' style='margin-top:14px;gap:28px'>${st('Bills',L.length)}${st('Tyres sold',s.units)}${st('Tyre cost',inr(s.cost))}${st('Sales before GST',inr(s.sub))}${st('GST',inr(s.tax))}${st('Total billed',inr(s.total))}${st('Gross profit',inr(s.profit))}</div>`:''}
+ <div class='acts' style='justify-content:flex-start'><button class='btn' onclick='toggleSt()' aria-expanded='${showSt}'>${showSt?'Hide figures':'Show figures'}</button><button class='btn' onclick='dlCsv()'>Download sales CSV (Excel)</button><button class='btn' onclick='dlSummaryPdf()'>Download summary PDF</button><button class='btn d' onclick='delRangeForm()'>Delete bills in range</button></div></div>`}
+function dlCsv(){const L=srt(rng());if(!L.length)return toast('No bills in this date range');
+ const q=v=>'"'+String(v==null?'':v).replace(/"/g,'""')+'"',rows=[['Bill No','Date','Customer','Phone','Vehicle','Item','Qty','Unit Price','Line Amount','GST %','GST Amount','Line Total','Bill Total'].map(q).join(',')];
+ L.forEach(i=>i.items.forEach(c=>{const a=c.price*c.qty,g=a*(i.rate||0)/100;rows.push([i.no,i.date,i.name,i.phone,i.veh,c.name,c.qty,c.price,a.toFixed(2),i.rate||0,g.toFixed(2),(a+g).toFixed(2),(+i.total).toFixed(2)].map(q).join(','))}));
+ saveFile(`rollin-sales_${rf}_to_${rt}.csv`,String.fromCharCode(0xFEFF)+rows.join(String.fromCharCode(13,10)))}
+function dlSummaryPdf(){const J=PDF();if(!J)return;const L=srt(rng());if(!L.length)return toast('No bills in this date range');
+ const d=new J({unit:'mm',format:'a4'}),s=sumR(L);let y=12;d.setFont('helvetica','bold');d.setFontSize(26);d.text('ROLLIN TYRES',15,y+8,{charSpace:.5});y+=12;d.setFont('helvetica','normal');d.setFontSize(9);d.text(SHOP.tag.toUpperCase(),15,y+1,{charSpace:2});y+=10;d.setFont('helvetica','bold');d.setFontSize(16);d.text('Sales report',15,y);y+=6;d.setFont('helvetica','normal');d.setFontSize(10);d.text(fd(rf)+' to '+fd(rt),15,y);y+=5;d.text(SHOP.addr,15,y);y+=8;
+ [['Bills',L.length],['Tyres sold',s.units],['Tyre cost',rs(s.cost)],['Sales before GST',rs(s.sub)],['GST collected',rs(s.tax)],['Total billed',rs(s.total)],['Gross profit (before GST)',rs(s.profit)]].forEach(r=>{d.text(r[0],15,y);d.text(String(r[1]),95,y,{align:'right'});y+=5.5});y+=4;
+ const head=c=>{d.setFont('helvetica','bold');d.setFontSize(9);c.forEach(x=>d.text(x[0],x[1],y,{align:x[2]||'left'}));y+=2;d.line(15,y,195,y);y+=5;d.setFont('helvetica','normal')};
+ const C1=[['Bill #',15],['Date',46],['Customer',72],['Subtotal',140,'right'],['GST',166,'right'],['Total',195,'right']];head(C1);
+ L.forEach(i=>{if(y>275){d.addPage();y=18;head(C1)}d.text(i.no,15,y);d.text(fd(i.date),46,y);d.text(String(i.name).slice(0,28),72,y);d.text((+i.sub).toFixed(2),140,y,{align:'right'});d.text((+i.tax).toFixed(2),166,y,{align:'right'});d.text((+i.total).toFixed(2),195,y,{align:'right'});y+=5.5});
+ const m={};L.forEach(i=>i.items.forEach(c=>{const o=m[c.name]||(m[c.name]={q:0,a:0});o.q+=c.qty;o.a+=c.price*c.qty}));
+ y+=8;if(y>250){d.addPage();y=18}d.setFont('helvetica','bold');d.setFontSize(12);d.text('Tyres sold',15,y);y+=6;const C2=[['Item',15],['Qty',150,'right'],['Amount (before GST)',195,'right']];head(C2);
+ Object.entries(m).sort((a,b)=>b[1].q-a[1].q).forEach(e=>{if(y>275){d.addPage();y=18;head(C2)}d.text(e[0],15,y);d.text(String(e[1].q),150,y,{align:'right'});d.text(e[1].a.toFixed(2),195,y,{align:'right'});y+=5.5});
+ saveFile(`rollin-sales-report_${rf}_to_${rt}.pdf`,d.output('blob'))}
+
+function doDel(L,r){L.forEach(i=>i.items.forEach(c=>{const p=DB.products.find(x=>x.id===c.id);if(!p)return;if(r){p.soh+=c.qty;log(p,'Sale cancelled',c.qty,p.soh,'Bill '+i.no+' deleted, stock returned',i.no)}else log(p,'Bill deleted',0,p.soh,'Bill '+i.no+' deleted, stock unchanged',i.no)}));const ns=new Set(L.map(i=>i.no));DB.invoices=DB.invoices.filter(i=>!ns.has(i.no));save()}
+function delInvForm(no){const i=getInv(no);if(!i)return;open_(`<h2>Delete bill ${i.no}?</h2><p>${E(i.name)} · ${inr(i.total)}<br><span class='mut'>It will be removed from sales history and reports. This cannot be undone.</span></p><label style='display:flex;gap:8px;align-items:center'><input type='checkbox' id='dr' checked style='width:22px;min-height:22px'> Return the tyres to stock</label><div class='acts'><button class='btn' onclick='close_()'>Cancel</button><button class='btn' style='background:var(--bad);border-color:var(--bad);color:#fff' onclick="delInv('${i.no}')">Delete bill</button></div>`)}
+function delInv(no){const r=$('#dr').checked;doDel([getInv(no)],r);close_();render();toast('Bill deleted')}
+function delRangeForm(){const L=rng();if(!L.length)return toast('No bills in this date range');open_(`<h2>Delete ${L.length} bill${L.length>1?'s':''}?</h2><p>Every bill from ${fd(rf)} to ${fd(rt)} will be removed from sales history and reports. This cannot be undone. Download the CSV first if you want a copy.</p><label style='display:flex;gap:8px;align-items:center'><input type='checkbox' id='dr' style='width:22px;min-height:22px'> Return the tyres to stock</label><div style='margin-top:10px'><label for='dc'>Type DELETE to confirm</label><input id='dc' autocomplete='off'></div><div class='acts'><button class='btn' onclick='close_()'>Cancel</button><button class='btn' style='background:var(--bad);border-color:var(--bad);color:#fff' onclick='delRange()'>Delete all</button></div>`)}
+function delRange(){if($('#dc').value.trim()!=='DELETE')return toast('Type DELETE to confirm');const L=rng(),r=$('#dr').checked;doDel(L,r);close_();render();toast(L.length+' bills deleted')}
+
+/* ---------- Mobile-safe WhatsApp & confirmations ---------- */
+let ASK=null;
+function ask(m,l,fn){ASK=fn;open_(`<h2>Please confirm</h2><p>${E(m)}</p><div class='acts'><button class='btn' onclick='close_()'>Cancel</button><button class='btn p' onclick='close_();ASK&&ASK()'>${E(l)}</button></div>`)}
+function delProd(id){const p=DB.products.find(x=>x.id===id);if(!p)return;ask('Delete '+pname(p)+'? Past bills and logs are kept.','Delete tyre',()=>{DB.products=DB.products.filter(x=>x.id!==id);log(p,'Deleted',0,0,'Product removed');save();render();toast('Tyre deleted')})}
+function waMsg(i){return `*${SHOP.name}* - Bill ${i.no}\nDate: ${fd(i.date)}\nCustomer: ${i.name}${i.veh?'\nVehicle: '+i.veh:''}\n\n`+i.items.map(c=>`- ${c.name} x ${c.qty} = ${inr(c.price*c.qty)}`).join('\n')+`\n\nSubtotal: ${inr(i.sub)}${i.gst?`\nGST (${i.rate}%): ${inr(i.tax)}`:''}\n*Total: ${inr(i.total)}*\n\nThank you for your purchase!\n${SHOP.tag}\n${SHOP.addr}`}
+function waUrl(i){let p=(i.phone||'').replace(/\D/g,'');if(p.length===11&&p[0]==='0')p=p.slice(1);if(p.length===10)p='91'+p;return 'https://wa.me/'+p+'?text='+encodeURIComponent(waMsg(i))}
+function waUp(no){const i=getInv(no);i.phone=$('#wp').value.trim();$('#wl').href=waUrl(i)}
+function waCopy(no){const m=waMsg(getInv(no));(navigator.clipboard?navigator.clipboard.writeText(m):Promise.reject()).then(()=>toast('Message copied. Paste it in WhatsApp.'),()=>{const t=$('#wm');const r=document.createRange();r.selectNodeContents(t);const s=getSelection();s.removeAllRanges();s.addRange(r);toast('Message selected. Press and hold to copy.')})}
+function waShare(no){const i=getInv(no);navigator.share({title:'Bill '+i.no,text:waMsg(i)}).catch(()=>{})}
+function wa(no){const i=getInv(no);if(!i)return;
+ open_(`<h2>Send bill ${i.no} on WhatsApp</h2><p class='mut' style='font-size:14px;margin:0 0 12px'>"Share PDF" sends the bill as a PDF file through your phone's share menu: choose WhatsApp, then the customer. WhatsApp links alone can only carry text.</p><div class='row'><div><label for='wp'>Customer phone (10 digits)</label><input id='wp' type='tel' inputmode='tel' value='${E(i.phone)}' oninput="waUp('${no}')" onchange='save()'></div></div>
+ <pre id='wm' style='white-space:pre-wrap;font:inherit;background:var(--bg);padding:10px;border-radius:8px;max-height:30vh;overflow:auto;margin:12px 0 0'>${E(waMsg(i))}</pre>
+ <div class='acts'><button class='btn' onclick='close_()'>Close</button><button class='btn' onclick="waCopy('${no}')">Copy message</button>${navigator.share?`<button class='btn' onclick="waShare('${no}')">Share…</button>`:''}${navigator.canShare?`<button class='btn p' onclick="waPdf('${no}')">Share PDF</button>`:`<button class='btn p' onclick="dlInvoice('${no}','a4')">Download PDF</button>`}<a id='wl' class='btn' href='${waUrl(i)}' target='_blank' rel='noopener' style='display:inline-flex;align-items:center;text-decoration:none'>Send text only</a></div>`)}
+
+async function waPdf(no){const i=getInv(no);if(!i)return;const d=await buildPdf(i,'a4');if(!d)return;const file=new File([d.output('blob')],i.no+'.pdf',{type:'application/pdf'});
+ if(navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({files:[file],title:'Bill '+i.no,text:SHOP.name+' - Bill '+i.no+' - '+inr(i.total)});return}catch(e){if(e&&e.name==='AbortError')return}}
+ toast('This phone or view cannot share files directly. Downloading the PDF instead.');dlInvoice(no,'a4')}
+
+/* ---------- Delete stock-in & audit log records ---------- */
+function delLogForm(k,stk){const l=DB.log.find(x=>x.k===k);if(!l)return;const rev=stk&&l.type==='Stock-in'&&l.delta>0;
+ open_(`<h2>Delete this ${stk?'stock-in':'audit log'} record?</h2><p>${E(l.name)} · ${l.delta>0?'+':''}${l.delta} · ${fdt(l.t)}<br><span class='mut'>${E(l.reason)}</span></p>${rev?`<label style='display:flex;gap:8px;align-items:center'><input type='checkbox' id='dr' checked style='width:22px;min-height:22px'> Also take these ${l.delta} units off stock</label>`:`<p class='mut'>Only the record is removed. Stock counts do not change.</p>`}<div class='acts'><button class='btn' onclick='close_()'>Cancel</button><button class='btn' style='background:var(--bad);border-color:var(--bad);color:#fff' onclick="delLog('${k}',${rev})">Delete record</button></div>`)}
+function delLog(k,rev){const l=DB.log.find(x=>x.k===k);if(!l)return;if(rev&&$('#dr')&&$('#dr').checked){const p=DB.products.find(x=>x.id===l.pid);if(p){const n=Math.max(0,p.soh-l.delta),d=n-p.soh;p.soh=n;log(p,'Manual override',d,n,'Stock-in record deleted ('+l.reason+')')}}DB.log=DB.log.filter(x=>x.k!==k);save();close_();render();toast('Record deleted')}
+function delAllLogForm(kind){const L=kind==='stock'?DB.log.filter(l=>l.type==='Stock-in'):DB.log;if(!L.length)return toast('Nothing to delete');
+ open_(`<h2>Delete ${L.length} ${kind==='stock'?'stock-in':'audit log'} record${L.length>1?'s':''}?</h2><p>Only the records are removed. Stock counts do not change. This cannot be undone.</p><div><label for='dc'>Type DELETE to confirm</label><input id='dc' autocomplete='off'></div><div class='acts'><button class='btn' onclick='close_()'>Cancel</button><button class='btn' style='background:var(--bad);border-color:var(--bad);color:#fff' onclick="delAllLog('${kind}')">Delete all</button></div>`)}
+function delAllLog(kind){if($('#dc').value.trim()!=='DELETE')return toast('Type DELETE to confirm');DB.log=kind==='stock'?DB.log.filter(l=>l.type!=='Stock-in'):[];save();close_();render();toast('Records deleted')}
+
+/* ---------- Vehicle number auto-format ---------- */
+function fmtVeh(v){const c=String(v).toUpperCase().replace(/[^A-Z0-9]/g,'');let m=/^(\d{2})(BH)(\d{0,4})([A-Z]{0,2})/.exec(c);if(m)return [m[1],m[2],m[3],m[4]].filter(Boolean).join(' ');m=/^([A-Z]{0,2})(\d{0,2})([A-Z]{0,3})(\d{0,4})/.exec(c);return [m[1],m[2],m[3],m[4]].filter(Boolean).join(' ')}
+const VEH=/^([A-Z]{2} \d{2} [A-Z]{1,3} \d{4}|\d{2} BH \d{4} [A-Z]{1,2})$/;
+function vehHint(v){return !v?'':VEH.test(v)?'<span style="color:var(--ok)">\u2713 Valid format</span>':'<span class="mut">Format: TN 37 AB 1234</span>'}
+function vehIn(el){const f=fmtVeh(el.value);el.value=f;cust.veh=f}
+
+/* ---------- Atomic Firebase operations: safe when several devices bill at once ---------- */
+const mkLog=(p,type,delta,after,reason,ref)=>clean({k:uid(),t:now(),pid:p.id,name:`${p.brand} ${p.size}`,type,delta,after,reason,ref:ref||null});
+async function nextBillNo(){const ref=fs.doc('meta/counters'),local=Math.max(0,...DB.invoices.map(i=>{const m=/^RT-(\d+)$/.exec(i.no);return m?+m[1]:0}));
+ const n=await fs.runTransaction(async t=>{const d=await t.get(ref);const cur=Math.max(d.exists?(d.data().bill||0):0,local)+1;t.set(ref,{bill:cur},{merge:true});return cur});
+ return 'RT-'+String(n).padStart(4,'0')}
+async function commitOps(ops){for(let i=0;i<ops.length;i+=400){const b=fs.batch();ops.slice(i,i+400).forEach(f=>f(b));await b.commit()}}
+async function complete(){
+ if(!cart.length||busy)return;
+ for(const c of cart){const p=DB.products.find(x=>x.id===c.id);if(!p||p.soh<c.qty)return toast('Not enough stock: '+c.name)}
+ busy=true;
+ try{const t=totals(),no=await nextBillNo();
+  const inv=clean({no,date:cust.date||today(),created:now(),name:cust.name||'Walk-in customer',phone:cust.phone||'',veh:cust.veh||'',items:cart.map(c=>({...c})),gst,rate:gst?rate:0,sub:t.sub,tax:t.tax,total:t.total});
+  const ops=[b=>b.set(COL('invoices').doc(no),inv)];
+  cart.forEach(c=>{const p=DB.products.find(x=>x.id===c.id),lg=mkLog(p,'Sale',-c.qty,p.soh-c.qty,'Bill '+no,no);ops.push(b=>b.update(COL('products').doc(c.id),{soh:INC(-c.qty)}),b=>b.set(COL('log').doc(lg.k),lg))});
+  await commitOps(ops);done=inv;cart=[];cust={name:'',phone:'',veh:'',date:today()};gst=false;q='';render()
+ }catch(e){syncErr(e)}finally{busy=false}}
+async function stockIn(){const p=DB.products.find(x=>x.id===$('#r1').value),n=Math.floor(+$('#r2').value),s=$('#r3').value.trim(),b=$('#r4').value.trim();
+ if(!p||!(n>0))return toast('Enter a quantity of 1 or more');if(!s||!b)return toast('Supplier and bill number are required');
+ const lg=mkLog(p,'Stock-in',n,p.soh+n,`${s} / Bill ${b}`);
+ try{await commitOps([x=>x.update(COL('products').doc(p.id),{soh:INC(n)}),x=>x.set(COL('log').doc(lg.k),lg)]);render();toast(`Added ${n} to ${p.brand} ${p.size}`)}catch(e){syncErr(e)}}
+async function doDel(L,r){const ops=[],run={};
+ L.forEach(i=>{i.items.forEach(c=>{const p=DB.products.find(x=>x.id===c.id);if(!p)return;const cur=run[p.id]??p.soh;
+  if(r){run[p.id]=cur+c.qty;const lg=mkLog(p,'Sale cancelled',c.qty,cur+c.qty,'Bill '+i.no+' deleted, stock returned',i.no);ops.push(b=>b.update(COL('products').doc(p.id),{soh:INC(c.qty)}),b=>b.set(COL('log').doc(lg.k),lg))}
+  else{const lg=mkLog(p,'Bill deleted',0,cur,'Bill '+i.no+' deleted, stock unchanged',i.no);ops.push(b=>b.set(COL('log').doc(lg.k),lg))}});
+  ops.push(b=>b.delete(COL('invoices').doc(i.no)))});
+ try{await commitOps(ops)}catch(e){syncErr(e)}}
+
+/* ---------- History ---------- */
+function vHist(){
+ const t=`<div class="tabs"><button class="btn ${tab==='sales'?'on':''}" onclick="tab='sales';render()">Sales log</button><button class="btn ${tab==='audit'?'on':''}" onclick="tab='audit';render()">Stock audit log</button></div>`;
+ if(tab==='audit')return `<h1>Sales history</h1>${t}<div class="card"><button class="btn d" onclick="delAllLogForm('all')">Delete entire audit log</button></div><div class="card tw"><table><tr><th>When</th><th>Product</th><th>Type</th><th class="n">SOH before</th><th class="n">Change</th><th class="n">SOH after</th><th>Reason / reference</th><th></th></tr>
+ ${DB.log.map(l=>`<tr><td>${fdt(l.t)}</td><td>${E(l.name)}</td><td>${l.type}</td><td class="n">${l.type==='Deleted'?'–':l.after-l.delta}</td><td class="n" style="color:var(${l.delta<0?'--bad':'--ok'})">${l.delta>0?'+':''}${l.delta||'–'}</td><td class="n">${l.after}</td><td>${E(l.reason)}</td><td><button class="btn s d" onclick="delLogForm('${l.k}',false)">Delete</button></td></tr>`).join('')||'<tr><td colspan="8" class="mut">Nothing logged yet.</td></tr>'}</table></div>`;
+ return `<h1>Sales history</h1>${t}${rptBar()}<div class="card tw"><table><tr><th>Bill #</th><th>Date</th><th>Customer</th><th>Vehicle</th><th class="n">Total</th><th>Actions</th></tr>
+ ${rng().map(i=>`<tr><td><b>${i.no}</b></td><td>${fd(i.date)}</td><td>${E(i.name)}<div class="mut" style="font-size:13px">${E(i.phone)}</div></td><td>${E(i.veh)}</td><td class="n">${inr(i.total)}</td>
+ <td style="white-space:nowrap"><button class="btn s" onclick="viewInv('${i.no}')">View</button> <button class="btn s" onclick="dlInvoice('${i.no}','a4')">A4 PDF</button> <button class="btn s" onclick="dlInvoice('${i.no}','th')">Receipt PDF</button> <button class="btn s w" onclick="wa('${i.no}')">WhatsApp</button> <button class="btn s d" onclick="delInvForm('${i.no}')">Delete</button></td></tr>`).join('')||'<tr><td colspan="6" class="mut">No bills yet. Complete a sale in Billing.</td></tr>'}</table></div>`}
+function viewInv(no){const i=getInv(no);open_(`<div style="background:#fff;padding:14px;border-radius:8px;overflow:auto">${invHtml(i,'a4')}</div>
+ <div class="row" style="margin-top:10px"><div><label>Customer phone (for WhatsApp)</label><input id="vp" type="tel" value="${E(i.phone)}" onchange="getInv('${no}').phone=this.value.trim();save()"></div></div>
+ <div class="acts"><button class="btn" onclick="close_()">Close</button><button class="btn" onclick="dlInvoice('${no}','a4')">A4 PDF</button><button class="btn" onclick="dlInvoice('${no}','th')">Receipt PDF</button><button class="btn" onclick="printInv('${no}','a4')">Print A4</button><button class="btn" onclick="printInv('${no}','th')">Print receipt</button><button class="btn w" onclick="wa('${no}')">WhatsApp</button></div>`)}
+
+initFb();
+</script>
+</body>
+</html>
